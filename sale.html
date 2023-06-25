@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>销售平台</title>
+    <link rel="stylesheet" href="./sale.css">
+</head>
+
+<body>
+    <header>
+        <h1>销售平台</h1>
+    </header>
+    <div id="product-ontainer">
+
+        <!-- 购物车按钮 -->
+        <button id="cart-button" onclick="toggleCart()">购物车</button>
+        <!-- 订单明细按钮 -->
+        <button id="orders-button" onclick="toggleOrders()">订单明细</button>
+        <!-- 收货信息按钮 -->
+        <button id="address-button" onclick="toggleAddress()">收货信息</button>
+
+
+
+        <!-- 购物车 -->
+        <div id="cart" style="display: none;">
+            <h2>购物车</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品名称</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>小计</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- 购物车内容 -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">合计：</td>
+                        <td id="cart-total">0元</td>
+                        <td><button id="checkout-button" onclick="checkout()">结算</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- 收货信息 -->
+        <div id="address" style="display: none;">
+            <!-- 姓名 -->
+            <label for="name"> 姓 名 ：</label> <input type="text" id="name"><br>
+            <!-- 地址 -->
+            <label for="detail-address"> 详细地址 ：</label>
+            <input type="text" id="detail-address"><br>
+            <!-- 手机号码 -->
+            <label for="phone">手机号码：</label>
+            <input type="tel" id="phone"><br>
+            <button type="button" onclick="saveAddress()">保存</button>
+        </div>
+
+        <!-- 订单明细 -->
+        <div id="orders" style="display: none;">
+            <!-- 订单列表 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>订单编号</th>
+                        <th>下单时间</th>
+                        <th>订单金额</th>
+                        <th>订单状态</th>
+                        <th>收货信息</th>
+                    </tr>
+                </thead>
+                <tbody id="order-items">
+                    <!-- 订单列表内容 -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="./sale.js"></script>
+</body>
+
+</html>

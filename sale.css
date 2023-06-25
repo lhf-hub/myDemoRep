@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+/* 禁止换行 */
+* {
+    white-space: nowrap;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#product-ontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.product {
+    margin: 1rem;
+    padding: 1rem;
+    border: solid #ccc 1px;
+    border-radius: .5rem;
+    width: calc(33.33% - 2rem);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+}
+
+.product h2 {
+    margin-top: .5rem;
+    font-size: 1.2rem;
+}
+
+.product p {
+    margin-top: .5rem;
+    font-size: 0.9rem;
+}
+
+.product label {
+    margin-top: .5rem;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.product input[type="number"] {
+    margin-left: .5rem;
+    width: 50px;
+    padding: 5px;
+}
+
+.product button {
+    margin-top: .5rem;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #555;
+}
+
+#cart-button {
+     position: fixed;
+     top: 20px;
+     right: 180px;
+     background-color: #333;
+     color: #fff;
+     padding: 0.5rem 1rem;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+#orders-button {
+     position: fixed;
+     top: 20px;
+     right: 100px;
+     background-color: #333;
+     color: #fff;
+     padding: 0.5rem 1rem;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+#address-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cart-button:hover,
+#orders-button:hover,
+#address-button:hover {
+    background-color: #555;
+}
+
+#cart {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 2rem;
+    border: solid #ccc 1px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-width: 80%;
+}
+
+#cart h2 {
+    margin-bottom: 1rem;
+}
+
+#cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cart table th,
+#cart table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: solid #ccc 1px;
+}
+
+#cart table th:first-child,
+#cart table td:first-child {
+    width: 40%;
+}
+
+#cart table th:last-child,
+#cart table td:last-child {
+    width: 20%;
+}
+
+#cart table tfoot th,
+#cart table tfoot td {
+    text-align: right;
+}
+
+#cart table tfoot td {
+    font-weight: bold;
+}
+
+#address {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 2rem;
+    border: solid #ccc 1px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-width: 80%;
+}
+
+#address label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+#address input[type="text"],
+#address input[type="tel"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 0.9rem;
+    border: solid #ccc 1px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+#address button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#address button:hover {
+    background-color: #555;
+}
+
+#orders {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 2rem;
+    border: solid #ccc 1px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-width: 80%;
+}
+
+#orders h2 {
+    margin-bottom: 1rem;
+}
+
+#orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#orders table th,
+#orders table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: solid #ccc 1px;
+}
+
+#orders table th:first-child,
+#orders table td:first-child {
+    width: 40%;
+}
+
+#orders table th:last-child,
+#orders table td:last-child {
+    width: 20%;
+}
+
